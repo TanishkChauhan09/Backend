@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.but{
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+button{
+    background-color: rgb(164, 87, 236);
+    color: black;
+    size: 40px;
+}

@@ -1,0 +1,38 @@
+body{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ 
+#root{
+    background-color:rgb(248, 194, 94);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first1{
+    background-color: white;
+    box-shadow: 30 16px 40px rgba(238, 3, 3, 0.2);
+    border-radius: 20px;
+    height: 200px;
+    width: 500px;
+    text-align: center;
+}
+
+#sec{
+    background-color: rgb(134, 229, 134);
+}
+
+.b1{
+    background-color: bisque;
+    text-align: center;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}

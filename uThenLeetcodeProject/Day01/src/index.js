@@ -1,0 +1,18 @@
+const express = require('express');
+const app = express();
+require('dotenv').config();
+const main = reqiure('./config/db');
+const cookieParser = require('cookie-parser');
+
+
+app.use(express.json());
+app.use(cookieParser());
+
+main()
+.then(async ()=>{
+        app.listen(process.env.PORT , ()=>{
+        console.log("Listening at port number:"+process.env.PORT); 
+    }) 
+})
+.catch(err => console.log("Error occured: "+err));
+

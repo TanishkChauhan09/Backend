@@ -1,0 +1,13 @@
+node_modules
+node_modules/
+.parcel-cache/
+dist/
+build/
+.env
+dist
+coverage
+*.log
+.DS_Store
+package-lock.json
+package.json
+yarn.lock

@@ -1,0 +1,66 @@
+body{
+    margin: "0px";
+    padding: "0px";
+    box-sizing: border-box;
+}
+
+.heading{
+    display: flex;
+    justify-content:space-around;
+    box-shadow: 0 10px 10px rgb(169, 169, 228);
+}
+
+.images{
+    position: relative;
+    left: 10px;
+}
+
+.options{
+    padding-top: 20px;
+}
+
+.buti,.pro{
+    margin-right: 10px;
+    height: 30px;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+}
+
+.searchbar{
+    width:200px;
+    height: 30px;
+    position: relative;
+    top: 20px;
+
+}
+
+.pro{
+    padding-top:30px;
+}
+
+.middle{
+    background-color: rgb(214, 211, 206);
+    justify-content: center;
+}
+
+.card{
+    background-color: rgb(143, 137, 137);
+    margin: 20px;
+    box-shadow: 0 10px 20px rgb(254, 108, 108);
+}
+
+.bt1{
+    justify-content: center;
+    position: relative;
+    background-color: black;
+    color: white;
+    margin-left: 500px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.bt2, .bt3{
+    background-color: black;
+    color: white;
+    margin-left: 40px;
+}

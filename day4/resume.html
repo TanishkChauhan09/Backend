@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanishk Chauhan Resume</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <script>
+        var doc = new jsPDF();
+
+        // Set document properties (optional)
+        doc.setProperties({
+            title: 'Tanishk Chauhan Resume',
+            subject: 'Resume',
+            author: 'Tanishk Chauhan'
+        });
+
+        // Header information
+        doc.setFontSize(14);
+        doc.text("TANISHK CHAUHAN", 20, 20);
+        doc.setFontSize(10);
+        doc.text("iE-iamsanjeevchauhan78@gmail.com | +91 9389991343", 20, 25);
+
+        // About Me section
+        doc.setFontSize(12);
+        doc.text("About:", 20, 35);
+        doc.text("I am a passionate technology enthusiast with a keen interest in intuition based learning. I'm dedicated to leveraging technology to improve lives and solve real-world problems.", 20, 40, { align: 'justify' });
+
+        // Skills section
+        doc.text("Skills:", 20, 50);
+        doc.text("C++, Java, JavaScript (Intermediate), Data Structures, Algorithms, Object-Oriented Programming", 20, 55, { align: 'justify' });
+
+        // Education section
+        doc.text("Education:", 20, 65);
+        doc.text("B.Tech in Computer Science And Engineering Specialization in Artificial Intelligence And Machine Learning (2023-2027)", 20, 70, { align: 'justify' });
+        doc.text("G.L.B.I.T.M (Greater Noida)", 20, 75, { align: 'justify' });
+        doc.text("Sem 1: 9.5  Sem 2: 9.23", 20, 80, { align: 'justify' });
+        doc.text("12th: PCM - 90%", 20, 85, { align: 'justify' });
+
+        // Save the PDF
+        doc.save("Tanishk_Chauhan_Resume.pdf");
+    </script>
+</body>
+</html>
