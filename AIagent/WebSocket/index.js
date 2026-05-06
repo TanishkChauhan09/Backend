@@ -1,23 +1,31 @@
-const express = require('express');
+const express = require("express");
+const http = require("http");
+const path = require("path");
+const { Server } = require("socket.io");
+
 const app = express();
-const http = require('http');
-
 const server = http.createServer(app);
-const { Server } = require('socket.io');
-
 const io = new Server(server);
 
-io.on('connection', (socket)=>{
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
 
-    socket.on('message', (data)=>{
-        io.emit('message', data);
-    });
+io.on("connection", (socket) => {
 
-    socket.on('disconnect', ()=>{
-         console.log('user disconnected');
-    })
-})
+  socket.on("join-room", (room) => {
+    socket.join(room);
+  });
 
-server.listen(3000, ()=>{
-    console.log('listening at 3000');
-})
+  socket.on("message", ({ room, msg }) => {
+    socket.to(room).emit("new-message", msg);
+  });
+
+  socket.on("disconnect", () => {
+    console.log("User disconnected");
+  });
+});
+
+server.listen(4000, () => {
+  console.log("Listening at 4000");
+});
